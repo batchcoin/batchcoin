@@ -29,7 +29,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x384b060671f4a93948e9c168216dadb0ca2fbc54aa11c86b0345b6af1c59b2f5");
+uint256 hashGenesisBlock("0x783915b1d1ab62ec8f7dbd0538049093d4951932c83ee01f78f9f7c2f078145d");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2033,19 +2033,19 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1409141557;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 769735;
+        block.nNonce   = 2355726;
 
         if (fTestNet)
         {
-            block.nTime    = 1407009343;
-            block.nNonce   = 769735;
+            block.nTime    = 1409141557;
+            block.nNonce   = 2355726;
         }
 
         //// debug print
         printf("%s\n", block.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x701ac70f2eadc434419f0ded9891a61176ebad301d811d4348fdf436eabbffed"));
+        assert(block.hashMerkleRoot == uint256("0xb19fb221bd701f2f41c89c73e7cf0b1bb71690b75d407d9726ac0ecd0c34ef6b"));
 
         // If genesis block hash does not match, then generate new genesis hash.
         if (true && block.GetHash() != hashGenesisBlock)
