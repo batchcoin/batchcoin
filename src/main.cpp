@@ -2019,7 +2019,7 @@ bool LoadBlockIndex(bool fAllowNew)
 	// vMerkleTree: 5a2e19825b
         
         // Genesis block
-        const char* pszTimestamp = "Bitchcoin was founded at 2056 on 2 August 2014";
+        const char* pszTimestamp = "Bitchcoin was founded at 1313 on 27 August 2014";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2031,7 +2031,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1407009343;
+        block.nTime    = 1409141557;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 769735;
 
